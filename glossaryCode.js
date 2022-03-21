@@ -2,6 +2,7 @@
 
 // Main Program
 
+// Changing the character
 const selectedTags = [];
 
 outputItems(glossary);
@@ -85,7 +86,7 @@ function outputItems(glossaryItems) {
     const content = document.querySelector("#content");
     content.innerHTML = ""; // empty string to clear everything out (parameter) glossaryItem: any
     glossaryItems.forEach((glossaryItem) => {
-        // -- glossaryItem, i is a second argument you can do as a counter  
+        // -- glossaryItem, i is a second argument you can do as a counter
         const markup = `    
         <table bgcolor="" cellspacing="20" cellpadding="20">
         <div>
@@ -100,19 +101,22 @@ function outputItems(glossaryItems) {
             </div>
             <div>
             <center>
-                <h5><font face="arial" color="#B0C4DE"><i>Tags: ${glossaryItem.tags.join(", ")}</i></font></h5>
+                <h5><font face="arial" color="#B0C4DE"><i>Tags: ${glossaryItem.tags.join(
+                    ", "
+                )}</i></font></h5>
             </center>
             </div>
             <div>
             <center>
-                <h5><font face="arial" color="#B0C4DE">Class: 0${glossaryItem.class}</font></h5>
+                <h5><font face="arial" color="#B0C4DE">Class: 0${
+                    glossaryItem.class
+                }</font></h5>
                 </center>
             </div>
             </td>
         </div>
         <table>
     `;
-
 
         content.innerHTML += markup; // appendChild
     });
@@ -132,14 +136,14 @@ function outputItems(glossaryItems) {
 function filterByClass() {
     var selectTag = document.querySelector("select-class");
     const selectedClass = selectTag.value;
-    const filteredGlossary = glossaryItem.filter((glossary));
+    const filteredGlossary = glossaryItem.filter(glossary);
     if (selectedClass === glossaryItem.class) {
         return true;
     } else {
-    return false;
-}
+        return false;
+    }
     outputItems(filteredGlossary);
-    console.log(filteredGlossary)
+    console.log(filteredGlossary);
 }
 
 // function dropdownByClass () {
@@ -169,8 +173,6 @@ function filterByClass() {
 
 // }
 
-
-
 // Clear Button - Not Working
 
 // const clearButton = document.querySelector("#clear-button");
@@ -187,4 +189,3 @@ function filterByClass() {
 //     this.someField;
 //     let searchValue = document.querySelector("#search-input").value;
 // }
-
