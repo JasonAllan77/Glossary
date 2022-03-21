@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alex's Glossary</title>
+        <style>
+            :root {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #filters {
+                /* display: flex;
+                gap: 10px; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="filters">
+            <h2>Search</h2>
+            <div>
+                <input id="search-input" type="text" placeholder="Search" />
+                <button id="search-button">Search</button>
+            </div>
+            <div>
+                <h2>Tags</h2>
+                <div id="tags"></div>
+            </div>
+        </div>
+        <!-- Can put any JavaScript related content in this div -->
+        <div id="content"></div>
+
+        <script src="alex_glossaryData.js"></script>
+        <script src="alex_glossary.js"></script>
+        <!-- If in folder...  -->
+        <!-- <script src="folder/alex_glossary.js"></script> -->
+        <!-- Load Data file before we can do any work with it-->
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dancing Cats</title>
+        <style>
+            .dancing-cat {
+                position: absolute; 
+                /* top: 600px;
+                left: 500px; */
+            }
+            /* Need absolute position for an animation - can place it anywhere */
+        </style>
+    </head>
+    <body>
+        <img
+            id="dancing-cat"
+            src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+            class="dancing-cat"
+        />
+
+        <button id="move-cat">Move</button>
+
+<!-- Script written on this page but should be in a seprate file -->
+        <script>
+            // Get the cat element
+            const cat = document.querySelector("#dancing-cat");
+            cat.style.left = "200px"; // Need px
+            const moveCatButton = document.querySelector("#move-cat");
+            moveCatButton.addEventListener("click", () => {
+                console.log(cat.style.left);
+                // Convert the current left position to a number from a string
+                // Add some new value to it
+                // Add the 'px' back in, and update the `cat.style.left`
+                cat.style.left = parseInt(cat.style.left) + 200 + "px";
+            });
+
+            // Combine with knowledge of `setInterval` or `setTimeout`
+        </script>
+    </body>
+</html>

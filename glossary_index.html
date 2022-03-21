@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Glossary</title>
+    <!-- <link rel="stylesheet" href="glossaryStyle.css"> -->
+
+   <style>
+       body {
+           max-width: 800px;
+           font-family: fantasy, Arial;
+           background: #B0C4DE;
+           margin: 0 auto;
+       }
+
+        #filters {
+            /* display: flex;
+            gap: 10px; */
+        }
+    </style>
+
+</head>
+<body bgcolor="#B0C4DE">
+    <a name="top"></a>
+    <center>
+        <table cellpadding="50">
+            <td bgcolor="#0000CD" width="100%">
+                <center>
+    <h1><u><font color="#B0C4DE">An Interactive Glossary of JavaScript Terminology</font></u></u></h1>
+</center>    
+</td>
+    </table>
+
+    <h3>Please search by Keyword, Tags or Class</h3>
+
+    
+   
+
+    <div id="filters">
+        <h2><u>Search</u></h2>
+        <h4>Start typing your word and it will start searching</h4>
+        <div class="searchByText">
+            <input id="search-input" type="text" size="40" placeholder="Enter your search word" />
+            <input id="clear-button" type="reset" value="Reset Search">
+            <!-- <button id="clear-button">Clear Search</button> -->
+        </div>
+        
+        <div class="searchByClass">
+            <br>
+            <label for="select-class">Class Selection:</label>
+            <select name="class" id="select-class">
+                <option value="">Please select a Class</option>
+                <option value="Class 00">Class 00</option>
+                <option value="Class 01">Class 01</option>
+                <option value="Class 02">Class 02</option>
+                <option value="Class 03">Class 03</option>
+                <option value="Class 04">Class 04</option>
+                <option value="Class 05">Class 05</option>
+                <option value="Class 06">Class 06</option>
+                <option value="Class 07">Class 07</option>
+            </select>
+            <button type="button" onclick="filterByClass()">Display Class</button>
+        </div>
+
+        <div class="searchByTag" id="filters">
+                <h2><u>Tags (select one or multiple)</u></h2>
+                <div id="tags"></div>
+                <br>
+        </div>
+    </div>
+    <!-- Can put any JavaScript related content in this div -->
+    <!-- <table border="2">
+        <tr bgcolor="#FFFFFF"> -->
+            <!-- <td> -->
+                <div id="content"></div>
+                </center>
+            <!-- </td>
+        </tr>
+    </table> -->
+
+    <!-- If in folder...  -->
+    <!-- <script src="folder/alex_glossary.js"></script> -->
+    <!-- Load Data file before we can do any work with it-->
+
+    <h4><a href="#top">Return to the Top of the Glossary</a></h4>
+    <center>
+    <h6>Interactive Glossary created by Jason Allan for JavaScript Development - General Assembly March 2022<br>
+        Mobile: 0419 895 241, Email: <a href="mailto:getmappedaus@gmail.com">getmappedaus@gmail.com</a></h6>
+    </center>
+        <script src="glossaryData.js"></script>
+    <script src="glossaryCode.js"></script>
+</body>
+</html>
